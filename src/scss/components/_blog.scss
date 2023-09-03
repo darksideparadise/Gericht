@@ -1,0 +1,112 @@
+.blog {
+  padding: 152px 0 152px;
+  &__inner {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+  &__inner::after {
+    content: " ";
+    display: block;
+    background: url("../img/svg/decor-ball.svg") no-repeat;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+    transition: all 0.5s ease;
+    animation: rotate 13s linear infinite;
+
+    @include big-desktop {
+      display: none;
+    }
+  }
+  &__subtitle {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.92px;
+    margin-bottom: 25px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  &__subtitle::before {
+    content: "";
+    background: url("../img/svg/line.svg") no-repeat;
+    display: block;
+    width: 40px;
+    height: 9px;
+    position: absolute;
+    bottom: -60%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__title {
+    color: var(--title-color);
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 1.92px;
+    margin-bottom: 64px;
+  }
+  .wrapper {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    gap: 32px;
+    padding-bottom: 64px;
+    @include big-mobile {
+      grid-template: repeat(3, 1fr) / 1fr;
+      text-align: center;
+    }
+    &__item {
+      max-width: 412px;
+      @include big-mobile {
+        margin: 0 auto;
+      }
+    }
+  }
+  .title {
+    color: var(--title-color);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 41.6px */
+    letter-spacing: 1.28px;
+    text-transform: capitalize;
+    text-align: left;
+  }
+  .title:hover {
+    text-decoration-line: underline;
+  }
+  .text {
+    font-family: var(--second-family);
+    color: var(--text-color);
+    text-align: left;
+    padding: 32px 0;
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: 0.64px;
+  }
+  .button {
+    font-weight: 700;
+    line-height: 175%; /* 28px */
+    letter-spacing: 0.64px;
+    display: flex;
+    transition: color 0.5s;
+  }
+  .button:hover {
+    color: var(--title-color);
+  }
+  .date-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: 0.64px;
+  }
+}

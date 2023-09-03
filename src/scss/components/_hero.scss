@@ -1,0 +1,215 @@
+.hero {
+  padding-top: 48px;
+  height: 95vh;
+  position: relative;
+  bottom: 0;
+  right: 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 150px;
+    @include big-tablet {
+      margin-left: 70px;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+      justify-content: start;
+      margin-left: 20px;
+    }
+  }
+  .hesh {
+    transform: rotate(-90deg);
+    font-family: var(--second-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: 0.72px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    max-width: 50px;
+    @include super-small-mobile {
+      display: none;
+    }
+
+    &__bar {
+      margin-right: 40px;
+      color: var(--white);
+      transition: color 0.4s;
+
+      @include hover {
+        color: var(--title-color);
+      }
+    }
+
+    &__G {
+      color: var(--white);
+      transition: color 0.4s;
+
+      @include hover {
+        color: var(--title-color);
+      }
+    }
+  }
+
+  .info {
+    @include small-tablet {
+      margin-bottom: 50px;
+    }
+    @include big-mobile {
+      align-items: center;
+    }
+
+    &__subtitle {
+      position: relative;
+      top: 0;
+      left: 0;
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 130%;
+      letter-spacing: 0.92px;
+      margin-bottom: 8px;
+    }
+
+    &__subtitle::after {
+      content: " ";
+      display: block;
+      background: url("../img/svg/line.svg") no-repeat;
+      width: 40px;
+      height: 9px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+
+    &__title {
+      font-size: 90px;
+      font-weight: 700;
+      line-height: 130%;
+      letter-spacing: 3.6px;
+      max-width: 460px;
+      width: 100%;
+      color: var(--title-color);
+      padding: 8px 0px 32px 0px;
+      @include big-mobile {
+        font-size: 45px;
+      }
+      @include mobile {
+        font-size: 35px;
+      }
+    }
+
+    &__text {
+      color: var(--text-color);
+      font-family: var(--second-family);
+      font-weight: 400;
+      line-height: 175%;
+      max-width: 455px;
+      margin-bottom: 32px;
+      @include big-mobile {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .swap {
+    position: relative;
+    top: 0;
+    right: 0;
+
+
+    &::before {
+      content: " ";
+      display: block;
+      background: var(--title-color);
+      width: 435px;
+      height: 435px;
+      position: absolute;
+      top: -24px;
+      right: -24px;
+      z-index: -1;
+
+      @include big-desktop {
+        width: 250px;
+        height: 250px;
+        top: -17px;
+        right: -17px;
+      }
+      @include mobile {
+        width: 150px;
+        height: 150px;
+        top: -14px;
+        right: -14px;
+      }
+    }
+
+    &::after {
+      content: " ";
+      background: var(--title-color);
+      display: block;
+      width: 435px;
+      height: 435px;
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      z-index: -1;
+
+      @include big-desktop {
+        width: 250px;
+        height: 250px;
+        bottom: -17px;
+        left: -17px;
+      }
+      @include mobile {
+        width: 150px;
+        height: 150px;
+        bottom: -14px;
+        left: -14px;
+      }
+    }
+
+    .swiper {
+      margin: 0px;
+      max-width: 619px;
+      max-height: 688px;
+      width: 100%;
+      height: 100%;
+
+      @include big-desktop {
+        width: 350px;
+        height: 400px;
+      }
+      @include mobile {
+        width: 200px;
+        height: 250px;
+      }
+    }
+
+    .mySwiper {
+      &-wrapper {}
+
+      &-slide {
+        object-fit: cover;
+        width: 250px;
+        height: 300px;
+      }
+      &-slide img {
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

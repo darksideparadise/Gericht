@@ -1,0 +1,137 @@
+.cocktails {
+  padding: 152px 0 152px;
+
+  @include small-tablet {
+    padding: 40px 0;
+  }
+  &__inner {
+    text-align: center;
+
+  }
+  &__heading {
+    text-align: center;
+    .heading-subtitle {
+      color: var(--white);
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 130%;
+      letter-spacing: 0.92px;
+      margin-bottom: 25px;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .heading-subtitle::before {
+      content: "";
+      display: block;
+      background: url("../img/svg/line.svg") no-repeat;
+      width: 40px;
+      height: 9px;
+      position: absolute;
+      top: 130%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .heading-title {
+      color: var(--title-color);
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%; /* 83.2px */
+      letter-spacing: 2.56px;
+    }
+  }
+  &__menu {
+    padding: 64px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include small-tablet {
+      padding: 25px 0;
+    }
+    @include big-mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu__img {
+      width: 100%;
+      padding: 0 32px 0 0;
+
+      @include big-tablet {
+        display: none;
+      }
+    }
+  }
+  .drinks {
+    width: 100%;
+    &__class {
+      font-size: 45px;
+      font-weight: 600;
+      line-height: 130%;
+      letter-spacing: 1.8px;
+      text-align: center;
+      padding-bottom: 48px;
+      @include small-tablet {
+        font-size: 30px;
+      }
+    }
+    &__item {
+      display: flex;
+      @include big-tablet {
+        margin-left: 15px;
+      }
+    }
+    &__name {
+      text-align: left;
+      max-width: 192px;
+      width: 100%;
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 130%;
+      letter-spacing: 0.92px;
+      color: var(--title-color);
+      @include small-tablet {
+        font-size: 18px;
+      }
+    }
+    &__line {
+      width: 119px;
+      height: 1px;
+      background-color: var(--white);
+      margin: 14.5px 32px;
+
+    }
+    &__price {
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 130%;
+      letter-spacing: 0.92px;
+      @include small-tablet {
+        font-size: 18px;
+      }
+    }
+    &__size {
+      font-family: var(--second-family);
+      color: var(--text-color);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 175%;
+      letter-spacing: 0.64px;
+      padding-bottom: 40px;
+      text-align: left;
+
+      @include big-tablet {
+        margin-left: 15px;
+      }
+      @include small-tablet {
+        font-size: 11px;
+      }
+    }
+    &__size:last-child {
+      padding-bottom: 32px;
+    }
+  }
+}

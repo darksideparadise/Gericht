@@ -1,0 +1,147 @@
+.footer {
+  background: url("../img/back-knive.jpg") no-repeat 100% /100%;
+  padding: 128px 0;
+
+  @include tablet {
+    background: url("../img/back-knive.jpg") no-repeat;
+    padding: 60px 0;
+  }
+  &__inner {
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__info {
+    font-family: var(--second-family);
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: 0.64px;
+    position: absolute;
+    left: 52%;
+    transform: translateX(-50%);
+
+    @include news {
+      left: 55%;
+    }
+    @include tablet {
+      left: 50%;
+    }
+    @include super-small-mobile {
+      font-size: 10px;
+    }
+
+  }
+  &__contact-us {
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  .subtitle {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 1.28px;
+    color: #F5EFDB;
+    margin-bottom: 24px;
+    @include super-small-mobile {
+      font-size: 24px;
+    }
+  }
+
+  .title {
+    color: var(--title-color);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 2.56px;
+    @include super-small-mobile {
+      font-size: 30px;
+    }
+  }
+
+  .text {
+    font-family: var(--second-family);
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: 0.64px;
+    margin-bottom: 10px;
+    @include super-small-mobile {
+      font-size: 13px;
+    }
+  }
+
+  .text-main {
+    font-family: var(--second-family);
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: 0.64px;
+    max-width: 438px;
+    padding-bottom: 41px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    @include super-small-mobile {
+      font-size: 13px;
+    }
+  }
+
+  .text-main::after {
+    content: "";
+    background: url("../img/svg/line.svg") no-repeat;
+    display: block;
+    width: 40px;
+    height: 9px;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer__item-link {
+    font-family: var(--second-family);
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: 0.64px;
+    @include super-small-mobile {
+      font-size: 13px;
+    }
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    &__item {
+      margin-right: 16px;
+    }
+
+    &__item:hover path {
+      fill: var(--title-color);
+      transition: all .5s;
+    }
+  }
+  &__working-hours {
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+}

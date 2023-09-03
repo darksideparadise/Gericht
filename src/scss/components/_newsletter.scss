@@ -1,0 +1,76 @@
+.newsletter {
+  padding: 128px 0;
+
+  &__inner {
+    padding: 64px 252px;
+    border: 1px solid rgba(220, 202, 135, 0.20);
+    text-align: center;
+    background-color: #0C0C0C;
+    @include tablet {
+      padding: 64px 50px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.92px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__subtitle::after {
+    content: "";
+    background: url("../img/svg/line.svg") no-repeat;
+    display: block;
+    width: 40px;
+    height: 9px;
+    position: absolute;
+    bottom: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__title {
+    color: var(--title-color);
+    margin: 25px 0;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 1.92px;
+
+    @include news {
+      font-size: 40px;
+    }
+  }
+
+  &__text {
+    font-family: var(--second-family);
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: 0.64px;
+  }
+
+  .input {
+    width: 100%;
+    margin-top: 64px;
+  }
+
+  .email {
+    max-width: 635px;
+    width: 100%;
+    padding: 16px;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid #F5EFDB;
+    margin-right: 32px;
+  }
+  .btn-news {
+    @include news {
+      margin-top: 30px;
+    }
+  }
+}
+

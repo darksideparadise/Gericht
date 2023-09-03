@@ -1,0 +1,217 @@
+.chef {
+  background: url("../img/back-knive.jpg") no-repeat 100% /100%;
+  padding: 128px 0 128px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include big-desktop {
+      justify-content: space-around;
+    }
+    @include tablet {
+      justify-content: space-between;
+      background: url("../img/back-knive.jpg") no-repeat;
+    }
+    @include small-tablet {
+      flex-wrap: wrap-reverse;
+      background: url("../img/back-knive.jpg") no-repeat;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 0;
+    }
+  }
+
+  .swap {
+    position: relative;
+    top: 0;
+    right: 0;
+
+    &::before {
+      content: " ";
+      display: block;
+      background: var(--title-color);
+      width: 435px;
+      height: 435px;
+      position: absolute;
+      top: -24px;
+      right: -24px;
+      z-index: 0;
+
+      @include big-desktop {
+        width: 250px;
+        height: 250px;
+        top: -17px;
+        right: -17px;
+      }
+      @include mobile {
+        width: 150px;
+        height: 150px;
+        top: -14px;
+        right: -14px;
+      }
+    }
+
+    &::after {
+      content: " ";
+      background: var(--title-color);
+      display: block;
+      width: 435px;
+      height: 435px;
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      z-index: 0;
+
+      @include big-desktop {
+        width: 250px;
+        height: 250px;
+        bottom: -17px;
+        left: -17px;
+      }
+      @include mobile {
+        width: 150px;
+        height: 150px;
+        bottom: -14px;
+        left: -14px
+      }
+    }
+  }
+
+  .swiper {
+    margin: 0px;
+    max-width: 586px;
+    max-height: 741px;
+    width: 100%;
+    height: 100%;
+
+    @include big-desktop {
+      width: 350px;
+      height: 400px;
+    }
+    @include mobile {
+      width: 200px;
+      height: 250px;
+    }
+
+    .mySwiper {
+      &-slide {
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__info {
+    @include small-tablet {
+      margin-bottom: 50px;
+    }
+    .subtitle {
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 130%;
+      letter-spacing: 0.92px;
+      padding-bottom: 25px;
+      position: relative;
+      top: 0;
+      left: 0;
+      @include tablet {
+        font-size: 18px;
+      }
+    }
+
+    .subtitle::after {
+      content: "";
+      display: block;
+      background: url("../img/svg/line.svg") no-repeat;
+      width: 40px;
+      height: 9px;
+      position: absolute;
+      top: 60%;
+      left: 0;
+    }
+
+    .title {
+      color: var(--title-color);
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 130%;
+      letter-spacing: 1.92px;
+      padding-bottom: 64px;
+
+      @include tablet {
+        font-size: 40px;
+        padding-bottom: 34px;
+      }
+    }
+
+    .text {
+      font-family: var(--second-family);
+      max-width: 570px;
+      color: var(--text-color);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 175%;
+      letter-spacing: 0.64px;
+      text-indent: 49px;
+      padding-bottom: 64px;
+      position: relative;
+      top: 0;
+      left: 0;
+
+      @include tablet {
+        font-size: 14px;
+        padding-bottom: 34px;
+      }
+    }
+
+    .text::before {
+      content: "";
+      display: block;
+      background: url("../img/svg/quotes.svg") no-repeat;
+      width: 47px;
+      height: 40px;
+      position: absolute;
+      top: -13%;
+      left: 0;
+    }
+
+    .name {
+      color: var(--title-color);
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 130%;
+      letter-spacing: 1.28px;
+
+      @include tablet {
+        font-size: 20px;
+      }
+    }
+
+    .job-title {
+      font-family: var(--second-family);
+      padding-bottom: 64px;
+      font-weight: 400;
+      line-height: 175%;
+      letter-spacing: 0.64px;
+
+      @include tablet {
+        font-size: 13px;
+        padding-bottom: 34px;
+      }
+    }
+
+    .signature {
+      font-family: var(--third-family);
+      color: var(--text-color);
+      font-size: 64px;
+      font-weight: 400;
+      line-height: 130%;
+      letter-spacing: 2.56px;
+
+      @include tablet {
+        font-size: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+.testimonials {
+  padding: 152px 0 152px 0;
+  @include mobile {
+    padding: 0 0 30px 0;
+  }
+
+  &__inner {
+    position: relative;
+    top: 0;
+    right: 0;
+
+    .subtitle {
+      text-align: center;
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 130%;
+      margin-bottom: 25px;
+      letter-spacing: 0.92px;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .subtitle::after {
+      content: "";
+      display: block;
+      background: url("../img/svg/line.svg") no-repeat;
+      width: 40px;
+      height: 9px;
+      position: absolute;
+      top: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .title {
+      text-align: center;
+      color: var(--title-color);
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 130%;
+      letter-spacing: 1.92px;
+      margin-bottom: 64px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      @include tablet {
+        flex-direction: column;
+      }
+
+      &-top {
+        margin-bottom: 64px;
+        @include tablet {
+          margin-bottom: 0;
+        }
+      }
+
+      &-item {
+        display: flex;
+
+        @include tablet {
+          margin-bottom: 30px;
+        }
+      }
+
+      &-text {
+        color: var(--text-color);
+        font-family: var(--second-family);
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 175%;
+        letter-spacing: 0.64px;
+        max-width: 415px;
+        margin-bottom: 16px;
+
+        @include tablet {
+          font-size: 12px;
+        }
+      }
+
+      &-name {
+        color: var(--title-color);
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 130%;
+        letter-spacing: 1.28px;
+        margin-bottom: 4px;
+
+        @include tablet {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &-job {
+      font-family: var(--second-family);
+      font-weight: 400;
+      line-height: 175%;
+      letter-spacing: 0.64px;
+
+      @include tablet {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__inner::before {
+    content: " ";
+    display: block;
+    background: url("../img/svg/decor-ball.svg") no-repeat;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top: -30%;
+    right: 0;
+    transition: all 0.5s ease;
+    animation: rotate 13s linear infinite;
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .cards-photo {
+    margin-right: 32px;
+    width: 190px;
+    height: 190px;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    object-fit: contain;
+  }
+
+  .cards-photo::before {
+    content: "";
+    display: inline-block;
+    background: url("../img/svg/quotes.svg") no-repeat;
+    width: 47px;
+    height: 40px;
+    position: absolute;
+    bottom: -10%;
+    right: -8%;
+    z-index: 1;
+    @include big-mobile {
+      bottom: 0%;
+    }
+    @include small-mobile {
+      top: 70%;
+    }
+    @include super-small-mobile {
+      top: 60%;
+    }
+  }
+}

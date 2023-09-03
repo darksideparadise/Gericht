@@ -1,0 +1,244 @@
+.reservation {
+  padding: 152px 0;
+
+  &__inner {
+    background-color: #0C0C0C;
+    border: 1px solid var(--title-color);
+    padding: 48px 32px;
+    text-align: center;
+    position: relative;
+    top: 0;
+    right: 0;
+
+    .book-table {
+      &-title {
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 130%;
+        letter-spacing: 0.92px;
+        padding-bottom: 25px;
+        color: var(--white);
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+
+      &-title::after {
+        content: "";
+        display: block;
+        background: url("../img/svg/line.svg") no-repeat;
+        width: 40px;
+        height: 9px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &-text {
+        color: var(--title-color);
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 1.92px;
+        padding-bottom: 64px;
+
+        @include mobile {
+          font-size: 40px;
+        }
+      }
+    }
+
+    .data {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      @include big-mobile {
+        flex-direction: column;
+      }
+    }
+
+    .option {
+      max-width: 412px;
+      height: 60px;
+      width: 100%;
+      position: relative;
+      color: var(--text-color);
+
+      @include big-tablet {
+        margin: 0 10px;
+      }
+      @include big-mobile {
+        margin-bottom: 20px;
+      }
+      &__input-hidden {
+        display: none;
+      }
+
+      &__button {
+        display: block;
+        text-align: left;
+        padding: 16px;
+        font-family: inherit;
+        background-color: transparent;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-size: 16px;
+        color: var(--text-color);
+        font-weight: 600;
+        line-height: 175%;
+        letter-spacing: 0.64px;
+        cursor: pointer;
+        max-width: 412px;
+        height: 60px;
+        width: 100%;
+        border: 1px solid #F5EFDB;
+        transition: all 0.5s ease;
+        position: relative;
+        top: 0;
+        right: 0;
+      }
+
+      &__button::after {
+        content: "";
+        display: block;
+        background: url("../img/svg/arrow.svg") no-repeat;
+        width: 24px;
+        height: 24px;
+        margin-right: 18px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        transition: all 0.5s ease;
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        pointer-events: none;
+      }
+
+      &__list {
+        display: none;
+
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        border: 1px solid #F5EFDB;
+        border-bottom: 0px;
+        border-top: 0px;
+        overflow: hidden;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+      }
+
+      &__input {
+        font-variant-numeric: lining-nums tabular-nums;
+        background-color: transparent;
+        font-size: 16px;
+        color: var(--text-color);
+        cursor: pointer;
+        font-weight: 600;
+        line-height: 175%;
+        letter-spacing: 0.64px;
+
+      }
+
+      &__list--visible {
+        display: block;
+      }
+
+      &__item {
+        display: block;
+        text-align: left;
+        padding: 16px;
+        background-color: var(--bg-color);
+        font-variant-numeric: lining-nums tabular-nums;
+        font-size: 16px;
+        color: var(--text-color);
+        font-weight: 600;
+        line-height: 175%;
+        letter-spacing: 0.64px;
+        cursor: pointer;
+        max-width: 412px;
+        height: 60px;
+        width: 100%;
+        border: 1px solid #F5EFDB;
+        border-top: 0px;
+        transition: all 0.5s ease;
+      }
+
+      &__item:hover {
+        color: var(--bg-color);
+        background-color: var(--title-color);
+      }
+    }
+
+    .rot {
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+    .btn-reservation {
+      margin: 64px 0 48px 0;
+    }
+  }
+
+}
+.reservation__inner::before {
+  content: " ";
+  display: block;
+  background: url("../img/svg/decor-ball.svg") no-repeat;
+  width: 146px;
+  height: 146px;
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  transition: all 0.5s ease;
+  animation: rotate 13s linear infinite;
+  @include small-mobile {
+    display: none;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.reservation-bar {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+.reservation-bar::before {
+  content: " ";
+  display: block;
+  background: url("../img/decor/reserv1.svg") 0 0/100% no-repeat;
+  width: 1920px;
+  height: 10984px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.reservation-bar::after {
+  content: " ";
+  display: block;
+  background: url("../img/decor/reserv2.svg") 0 0/100% no-repeat;
+  width: 560px;
+  height: 10694px;
+  position: absolute;
+  top: 219px;
+  left: 0;
+  z-index: -2;
+}

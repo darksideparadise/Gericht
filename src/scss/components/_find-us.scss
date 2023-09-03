@@ -1,0 +1,184 @@
+.find-us {
+  background: url("../img/back-knive.jpg") no-repeat 100% / 100%;
+  padding: 128px 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  @include bg {
+    background: url("../img/back-knive.jpg") no-repeat;
+  }
+  @include rocks {
+    padding: 30px 0;
+  }
+
+  &-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include rocks {
+      flex-direction: column;
+    }
+    .info {
+      @include rocks {
+        margin-bottom: 30px;
+      }
+      .subtitle {
+        margin: 30px 0 25px;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        letter-spacing: 0.92px;
+        text-transform: capitalize;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+      .subtitle::after {
+        content: " ";
+        display: block;
+        background: url("../img/svg/line.svg") no-repeat;
+        width: 40px;
+        height: 9px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
+      .title {
+        color: var(--title-color);
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 1.92px;
+        text-transform: capitalize;
+      }
+      .adress {
+        color: var(--text-color);
+        font-family: var(--second-family);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 175%;
+        letter-spacing: 0.64px;
+        margin: 64px 0 32px;
+        @include rocks {
+          margin: 30px 0 20px;
+        }
+      }
+      .hours {
+        color: var(--title-color);
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        letter-spacing: 0.92px;
+        text-transform: capitalize;
+      }
+      .time {
+        font-family: var(--second-family);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 175%;
+        letter-spacing: 0.64px;
+        margin-top: 16px;
+      }
+      .btn {
+        margin-top: 64px;
+        @include rocks {
+          margin-top: 25px;
+        }
+      }
+    }
+    .img {
+      position: relative;
+      top: 0;
+      right: 0;
+      z-index: 2;
+
+      &::before {
+        content: " ";
+        display: block;
+        background: var(--title-color);
+        width: 435px;
+        height: 435px;
+        position: absolute;
+        top: -24px;
+        right: -24px;
+        z-index: -1;
+
+        @include big-desktop {
+          width: 250px;
+          height: 250px;
+          top: -17px;
+          right: -17px;
+        }
+        @include mobile {
+          width: 150px;
+          height: 150px;
+          top: -14px;
+          right: -14px;
+        }
+      }
+
+      &::after {
+        content: " ";
+        background: var(--title-color);
+        display: block;
+        width: 435px;
+        height: 435px;
+        position: absolute;
+        bottom: -24px;
+        left: -24px;
+        z-index: -1;
+
+        @include big-desktop {
+          width: 250px;
+          height: 250px;
+          bottom: -17px;
+          left: -17px;
+        }
+        @include mobile {
+          width: 150px;
+          height: 150px;
+          bottom: -14px;
+          left: -14px
+        }
+      }
+    }
+    .img img {
+      @include tablet {
+        width: 419px;
+        height: 488px;
+      }
+      @include rocks {
+        width: 319px;
+        height: 388px;
+      }
+      @include super-small-mobile {
+        width: 219px;
+        height: 2%;
+      }
+    }
+  }
+}
+.find-us::before {
+  content: " ";
+  display: block;
+  background: url("../img/svg/decor-ball.svg") no-repeat;
+  width: 146px;
+  height: 146px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transition: all 0.5s ease;
+  animation: rotate 13s linear infinite;
+  @include rocks {
+    left: 70%;
+  }
+  @include small-mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,175 @@
+.galery {
+  background: url("../img/back-knive.jpg") no-repeat 100% /100%;
+  padding: 128px 0;
+
+  @include big-desktop {
+    background: url("../img/back-knive.jpg") no-repeat;
+    padding: 70px 0 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include big-desktop {
+      flex-direction: column;
+    }
+  }
+
+  .info {
+    margin-right: 70px;
+
+    @include big-desktop {
+      margin-bottom: 30px;
+    }
+    @include big-tablet {
+      margin-bottom: 50px;
+    }
+    @include small-tablet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      margin-left: 30%;
+    }
+    @include big-mobile {
+      margin-left: 40%;
+    }
+    @include mobile {
+      margin-left: 60%;
+    }
+    @include super-small-mobile {
+      margin-left: 70%;
+    }
+
+    &__subtitle {
+      font-size: 23px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+      letter-spacing: 0.92px;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      margin-bottom: 25px;
+    }
+
+    &__subtitle::after {
+      content: "";
+      background: url("../img/svg/line.svg") no-repeat;
+      display: block;
+      width: 40px;
+      height: 9px;
+      position: absolute;
+      bottom: -40%;
+      left: 0;
+      @include small-tablet {
+        left: 50%;
+        transform: translate(-50%);
+      }
+      @include big-mobile {
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+
+    &__title {
+      color: var(--title-color);
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%;
+      letter-spacing: 1.92px;
+
+      @include big-mobile {
+        font-size: 40px;
+      }
+    }
+
+    &__text {
+      max-width: 491px;
+      font-family: var(--second-family);
+      color: var(--text-color);
+      font-weight: 400;
+      line-height: 175%;
+      letter-spacing: 0.64px;
+      margin: 24px 0;
+      @include big-mobile {
+        font-size: 13px;
+        max-width: 300px;
+      }
+    }
+  }
+
+  &__body {
+    min-width: 0;
+    width: 100%;
+    height: 401px;
+  }
+
+  .swiper {
+    height: 100%;
+    height: 447px;
+
+
+    &-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+
+    &-slide {
+      max-width: 301px;
+      height: 447px;
+      position: relative;
+
+      @include big-tablet {
+        width: 250px;
+        height: 300px;
+      }
+    }
+
+    &-slide::after {
+      content: "";
+      background-image: url("../img/svg/galary-inst.svg");
+      z-index: 6;
+      width: 52px;
+      height: 52px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      opacity: 0;
+      transition: all 0.9s;
+      transform: translate(-50%, -50%);
+    }
+
+    &-slide::before {
+      content: "";
+      background: linear-gradient(207.55deg, rgba(0, 0, 0, .75) 1.5%, rgba(0, 0, 0, .64) 98.62%);
+      opacity: 0;
+      z-index: 5;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: all 0.9s;
+      top: 0;
+      left: 0;
+    }
+
+    &-slide:hover::before {
+      opacity: 1;
+    }
+
+    &-slide:hover::after {
+      opacity: 1;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.5s;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  --font-family:"Cormorant Upright", sans-serif;
+  --second-family:"Open Sans", sans-serif;
+  --third-family: "Bestermind", sans-serif;
+  --content-width: 1424px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) *2));
+
+  // colors
+  --bg-color: #0C0B08;
+  --title-color: #DCCA87;
+  --text-color: #AAA;
+  --white: #FFF;
+
+}

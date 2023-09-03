@@ -1,0 +1,17 @@
+.btn {
+  font-weight: 700;
+  line-height: 175%;
+  letter-spacing: 0.64px;
+  color: #0C0B08;
+  background-color: var(--title-color);
+  padding: 8px 32px;
+  transition: 0.5s;
+  display: inline-block;
+  border:2px solid var(--bg-color);
+  transition:all 0.3s ease-in-out;
+  &:hover{
+    background-color: transparent;
+    color: var(--title-color);
+    border:2px solid var(--title-color);
+  }
+}

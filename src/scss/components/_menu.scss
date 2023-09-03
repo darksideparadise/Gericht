@@ -1,0 +1,58 @@
+.menu {
+  background-image: url(../img/old-fashion.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 64px;
+  color: var(--white);
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 1.92px;
+  text-transform: capitalize;
+  @include little-tablet {
+    font-size: 45px;
+    background-size: 100%;
+  }
+  @include big-mobile {
+    font-size: 25px;
+  }
+
+  &__list {
+    padding: 293px 0 262px;
+    display: inline-flex;
+    justify-content: start;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    @include small-tablet {
+      padding: 70px 0;
+    }
+  }
+  &__list::before {
+    content: " ";
+    display: block;
+    background: url("../img/svg/decor-ball.svg") no-repeat;
+    width: 146px;
+    height: 146px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+    animation: rotate 13s linear infinite;
+
+    @include little-tablet {
+      display: none;
+    }
+
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(360deg);
+    }
+  }
+}
+.menu__item:hover {
+  text-decoration-line: underline;
+}

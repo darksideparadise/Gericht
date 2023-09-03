@@ -1,0 +1,116 @@
+.poison {
+  padding: 201px 0 143px 0;
+  @include mobile {
+    padding: 80px 0;
+  }
+
+  &-inner {
+
+    &-text {
+      text-align: center;
+      margin-bottom: 64px;
+
+      .subtitle {
+        margin-bottom: 25px;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        letter-spacing: 0.92px;
+        text-transform: capitalize;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+
+      .subtitle::after {
+        content: " ";
+        display: block;
+        background: url("../img/svg/line.svg") no-repeat;
+        width: 40px;
+        height: 9px;
+        position: absolute;
+        top: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .title {
+        color: var(--title-color);
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 2.56px;
+        text-transform: capitalize;
+        @include super-small-mobile {
+          font-size: 37px;
+        }
+      }
+    }
+
+
+    .swiper {
+      &-slide {
+        max-width: 410px;
+        height: 600px;
+        margin: 0 33px;
+        position: relative;
+        @include big-mobile {
+          max-width: 310px;
+          height: 500px;
+        }
+      }
+
+      &-slide-text {
+        color: var(--white);
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 1.8px;
+        text-transform: capitalize;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 6;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: all 0.4s;
+      }
+
+      &-slide::before {
+        content: "";
+        background: linear-gradient(207.55deg, rgba(0, 0, 0, .75) 1.5%, rgba(0, 0, 0, .64) 98.62%);
+        opacity: 0;
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all 0.9s;
+        top: 0;
+        left: 0;
+      }
+
+      &-slide-text:hover {
+        opacity: 1;
+      }
+
+      &-slide:hover::before {
+        opacity: 1;
+        border: 1px solid var(--title-color);
+      }
+
+      &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s;
+      }
+    }
+  }
+}

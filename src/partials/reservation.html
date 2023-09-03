@@ -1,0 +1,43 @@
+<section class="reservation" id="reservation">
+  <div class="container">
+    <div class="reservation__inner">
+      <div class="book-table">
+        <div class="book-table-title">Reservations</div>
+        <div class="book-table-text">Book A Table</div>
+      </div>
+      <div class="data">
+        <div class="option">
+          <button class="option__button">1 Person</button>
+          <ul class="option__list">
+            <li class="option__item" data-value="1Pers">1 Person</li>
+            <li class="option__item" data-value="2Pers">2 Persons</li>
+            <li class="option__item" data-value="3Pers">3 Persons</li>
+            <li class="option__item" data-value="4Pers">4 Persons</li>
+          </ul>
+          <input type="text" name="select-category" value="" class="option__input-hidden">
+        </div>
+        <div class="option option-open">
+          <div class="option__button">
+            <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-required placeholder="12/05/2021"
+              data-calendar class="option__input">
+          </div>
+        </div>
+        <div class="option">
+          <button class="option__button">11:00 AM</button>
+          <ul class="option__list">
+            <li class="option__item" data-value="1">11:00 AM</li>
+            <li class="option__item" data-value="2">12:00 AM</li>
+            <li class="option__item" data-value="3">1:00 PM</li>
+            <li class="option__item" data-value="4">2:00 PM</li>
+            <li class="option__item" data-value="5">3:00 PM</li>
+            <li class="option__item" data-value="6">4:00 PM</li>
+            <li class="option__item" data-value="7">5:00 PM</li>
+            <li class="option__item" data-value="8">6:00 PM</li>
+          </ul>
+          <input type="text" name="select-category" value="" class="option__input-hidden">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-reservation">Book Now</button>
+    </div>
+  </div>
+</section>

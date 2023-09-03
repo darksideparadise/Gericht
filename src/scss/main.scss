@@ -1,0 +1,29 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/btn";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about-us";
+@import "./components/reservation";
+@import "./components/menu";
+@import "./components/cocktails";
+@import "./components/chef";
+@import "./components/testimonials";
+@import "./components/video";
+@import "./components/awards";
+@import "./components/blog";
+@import "./components/galery";
+@import "./components/newsletter";
+@import "./components/footer";
+
+// подключения компонентов 2-ой страницы
+@import "./components/hero-bar";
+@import "./components/about-us-bar";
+@import "./components/poison";
+@import "./components/happy-hours";
+@import "./components/find-us";

@@ -1,0 +1,105 @@
+.about-us-bar {
+  background: url("../img/back-knive.jpg") no-repeat 100% / 100%;
+  padding: 110px 0 79px 0;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  @include bg {
+    background: url("../img/back-knive.jpg") no-repeat;
+  }
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-img {
+    @include big-tablet {
+      width: 323px;
+      height: 502px;
+      margin-right: 15px;
+    }
+    @include little-tablet {
+      display: none;
+    }
+  }
+  &-info {
+    @include little-tablet {
+      margin: 0 auto;
+    }
+    .subtitle {
+      margin: 30px 0 25px;
+      font-size: 23px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+      letter-spacing: 0.92px;
+      text-transform: capitalize;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    .subtitle::after {
+      content: " ";
+      display: block;
+      background: url("../img/svg/line.svg") no-repeat;
+      width: 40px;
+      height: 9px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+    .title {
+      color: var(--title-color);
+      max-width: 615px;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%;
+      letter-spacing: 1.92px;
+      text-transform: capitalize;
+
+      @include small-tablet {
+        font-size: 50px;
+      }
+      @include small-mobile {
+        font-size: 40px;
+      }
+    }
+    .text {
+      color: var(--text-color);
+      max-width: 523px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 175%;
+      letter-spacing: 0.64px;
+      margin: 32px 0;
+    }
+    .photo {
+      @include tablet {
+        width: 434px;
+        height: 185px;
+      }
+
+    }
+  }
+}
+.about-us-bar::before {
+  content: " ";
+  display: block;
+  background: url("../img/svg/decor-ball.svg") no-repeat;
+  width: 146px;
+  height: 146px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transition: all 0.5s ease;
+  animation: rotate 13s linear infinite;
+  @include little-tablet {
+    top: -10%;
+  }
+
+  @include small-mobile {
+    display: none;
+  }
+}
