@@ -1,7 +1,7 @@
 .testimonials {
   padding: 152px 0 152px 0;
-  @include mobile {
-    padding: 0 0 30px 0;
+  @include big-tablet {
+    padding: 0 0 80px 0;
   }
 
   &__inner {
