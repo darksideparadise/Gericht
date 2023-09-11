@@ -104,7 +104,7 @@ const swiper4 = new Swiper('.poisonSwiper', {
   loop: true,
   breakpoints: {
     // when window width is >= 320px
-    320: {
+    300: {
       slidesPerView: 'auto',
     },
   }
@@ -133,13 +133,66 @@ import AOS from 'aos';
 AOS.init();
 
 // Подключение параллакса блоков при скролле
-import Rellax from 'rellax';
-const rellax = new Rellax('.rellax');
+// import Rellax from 'rellax';
+// const rellax = new Rellax('.rellax');
 
 // Подключение плавной прокрутки к якорям
 import SmoothScroll from 'smooth-scroll';
 import { auto } from '@popperjs/core';
 const scroll = new SmoothScroll('a[href*="#"]');
+// -------------------------------------------------------------------------
+// Cекция video
+
+$(function () {
+  var $video = $('#video'),
+    $videoControls = $('.video-control'),
+    $myVideo = $('#myVideo')[0];
+
+  $videoControls.click(function () {
+    if ($myVideo.paused) {
+      $myVideo.play();
+      $video.addClass('video-is-playing');
+    } else {
+      $myVideo.pause();
+      $video.removeClass('video-is-playing');
+      //  возврат постера
+      $myVideo.load();
+    }
+  });
+});
+// -------------------------------------------------------------------------
+// Дропдаун меню
+
+document.querySelectorAll('.option').forEach(function (optionWrapper) {
+
+  const Btn = optionWrapper.querySelector('.option__button');
+  const list = optionWrapper.querySelector('.option__list');
+  const listItem = list.querySelectorAll('.option__item');
+
+
+  // клик по кнопке. открыть/закрыть select
+  Btn.addEventListener('click', function () {
+    list.classList.add('option__list--visible');
+    this.classList.add('option__button--active');
+  });
+  // Выбор элемента списка.Запомнить значение. Закрыть дропдаун
+  listItem.forEach(function (listItem) {
+    listItem.addEventListener('click', function (e) {
+      e.stopPropagation();
+      Btn.innerText = this.innerText;
+      Btn.focus();
+      document.querySelector('.option__input-hidden').value = this.dataset.value;
+      list.classList.remove('option__list--visible');
+    });
+  });
+  // Клик снаружи дропдауна
+  document.addEventListener('click', function (e) {
+    if (e.target !== Btn) {
+      Btn.classList.remove('option__button--active');
+      list.classList.remove('option__list--visible');
+    }
+  });
+});
 
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';

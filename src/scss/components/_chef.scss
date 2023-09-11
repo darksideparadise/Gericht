@@ -1,6 +1,13 @@
 .chef {
   background: url("../img/back-knive.jpg") no-repeat 100% /100%;
   padding: 128px 0 128px;
+  @include chef {
+    padding: 30px 0;
+    background: url("../img/back-knive.jpg") no-repeat 100%;
+  }
+  @include tablet-chef {
+    padding: 30px 0 60px;
+  }
 
   &__inner {
     display: flex;
@@ -10,16 +17,10 @@
     @include big-desktop {
       justify-content: space-around;
     }
-    @include tablet {
-      justify-content: space-between;
-      background: url("../img/back-knive.jpg") no-repeat;
-    }
-    @include small-tablet {
-      flex-wrap: wrap-reverse;
-      background: url("../img/back-knive.jpg") no-repeat;
+    @include tablet-chef {
+      flex-direction: column-reverse;
       align-items: center;
       justify-content: center;
-      padding: 50px 0;
     }
   }
 
@@ -103,7 +104,7 @@
   }
 
   &__info {
-    @include small-tablet {
+    @include tablet-chef {
       margin-bottom: 50px;
     }
     .subtitle {
@@ -142,6 +143,9 @@
       @include tablet {
         font-size: 40px;
         padding-bottom: 34px;
+      }
+      @include super-small-mobile {
+        font-size: 35px;
       }
     }
 

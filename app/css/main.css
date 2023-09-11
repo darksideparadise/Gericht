@@ -663,7 +663,7 @@ a {
   width: 250px;
   height: 300px;
 }
-.hero .swap .mySwiper-slide img {
+.hero .swap .mySwiper-food {
   -o-object-fit: cover;
   object-fit: cover;
   height: 300px;
@@ -1036,7 +1036,7 @@ a {
   -webkit-animation: rotate 13s linear infinite;
   animation: rotate 13s linear infinite;
 }
-@media (max-width: 500px) {
+@media (max-width: 840px) {
   .reservation__inner::before {
     display: none;
   }
@@ -1335,6 +1335,17 @@ select {
   background: url("../img/back-knive.jpg") no-repeat 100%/100%;
   padding: 128px 0 128px;
 }
+@media (max-width: 1650px) {
+  .chef {
+    padding: 30px 0;
+    background: url("../img/back-knive.jpg") no-repeat 100%;
+  }
+}
+@media (max-width: 1050px) {
+  .chef {
+    padding: 30px 0 60px;
+  }
+}
 .chef__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1352,26 +1363,18 @@ select {
     justify-content: space-around;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
   .chef__inner {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    background: url("../img/back-knive.jpg") no-repeat;
-  }
-}
-@media (max-width: 950px) {
-  .chef__inner {
-    -ms-flex-wrap: wrap-reverse;
-    flex-wrap: wrap-reverse;
-    background: url("../img/back-knive.jpg") no-repeat;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 50px 0;
   }
 }
 .chef .swap {
@@ -1456,7 +1459,7 @@ select {
   -o-object-fit: cover;
   object-fit: cover;
 }
-@media (max-width: 950px) {
+@media (max-width: 1050px) {
   .chef__info {
     margin-bottom: 50px;
   }
@@ -1498,6 +1501,11 @@ select {
   .chef__info .title {
     font-size: 40px;
     padding-bottom: 34px;
+  }
+}
+@media (max-width: 360px) {
+  .chef__info .title {
+    font-size: 35px;
   }
 }
 .chef__info .text {
@@ -1574,7 +1582,12 @@ select {
 }
 @media (max-width: 1200px) {
   .testimonials {
-    padding: 0 0 80px 0;
+    padding: 40px 0 80px 0;
+  }
+}
+@media (max-width: 1024px) {
+  .testimonials {
+    padding: 40px 0 0 0;
   }
 }
 .testimonials__inner {
@@ -1707,7 +1720,7 @@ select {
   -webkit-animation: rotate 13s linear infinite;
   animation: rotate 13s linear infinite;
 }
-@media (max-width: 440px) {
+@media (max-width: 1024px) {
   .testimonials__inner::before {
     display: none;
   }
@@ -1749,78 +1762,156 @@ select {
   }
 }
 
-.video {
-  max-height: 763px;
-  height: 100%;
-}
-.video-main {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
+.video-section {
   position: relative;
-  top: 0;
-  left: 0;
+  height: auto;
 }
-.video-main::before {
+@media (max-width: 1024px) {
+  .video-section {
+    height: 600px;
+  }
+}
+@media (max-width: 950px) {
+  .video-section {
+    height: 500px;
+  }
+}
+@media (max-width: 840px) {
+  .video-section {
+    max-height: 400px;
+  }
+}
+@media (max-width: 670px) {
+  .video-section {
+    max-height: 310px;
+  }
+}
+@media (max-width: 620px) {
+  .video-section {
+    max-height: 210px;
+  }
+}
+@media (max-width: 500px) {
+  .video-section {
+    max-height: 250px;
+  }
+}
+@media (max-width: 440px) {
+  .video-section {
+    max-height: 200px;
+  }
+}
+@media (max-width: 360px) {
+  .video-section {
+    max-height: 140px;
+  }
+}
+.video-section #video {
+  width: 100%;
+  position: relative;
+}
+.video-section #video-over {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+.video-section #video-play {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 1px var(--title-color);
+  box-shadow: 0 0 0 1px var(--title-color);
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+@media (max-width: 670px) {
+  .video-section #video-play {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (max-width: 500px) {
+  .video-section #video-play {
+    width: 40px;
+    height: 40px;
+  }
+}
+.video-section #video-play::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 50%;
+  -webkit-transform: translate(-40%);
+  -ms-transform: translate(-40%);
+  transform: translate(-40%);
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-width: 12px;
+  border-bottom-width: 12px;
+  border-left-color: var(--white-color);
+  border-right-width: 0;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+@media (max-width: 500px) {
+  .video-section #video-play::before {
+    border: 10px solid transparent;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: var(--white-color);
+    left: 50%;
+    -webkit-transform: translate(-20%);
+    -ms-transform: translate(-20%);
+    transform: translate(-20%);
+  }
+}
+.video-section #video video {
+  width: 100%;
+  display: block;
+}
+.video-section #video.video-is-playing #video-over {
+  display: block;
+}
+.video-section #video.video-is-playing #video-play {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.video-section::after {
   content: " ";
   display: block;
   background: url("../img/svg/decor-ball.svg") no-repeat;
   width: 146px;
   height: 146px;
   position: absolute;
-  top: 50px;
-  left: -160px;
+  top: 0;
+  left: 50px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-animation: rotate 13s linear infinite;
   animation: rotate 13s linear infinite;
 }
-.video-video {
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  max-height: 763px;
-}
-.video video[poster] {
-  height: 100%;
-  width: 100%;
-}
-.video-wrapper {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.video .play_button {
-  background-color: transparent;
-  border-radius: 50%;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  transform: translate(-50%);
-}
-.video .play_button svg {
-  -o-object-fit: cover;
-  object-fit: cover;
-  background-color: transparent;
-  max-width: 120px;
-  max-height: 120px;
-}
-@media (max-width: 840px) {
-  .video .play_button svg {
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 70px;
-    height: 70px;
-  }
-}
-@media (max-width: 440px) {
-  .video .play_button svg {
-    width: 40px;
-    height: 40px;
+@media (max-width: 1024px) {
+  .video-section::after {
+    display: none;
   }
 }
 
@@ -1836,6 +1927,11 @@ select {
 @media (max-width: 1024px) {
   .awards {
     background: url("../img/back-knive.jpg") no-repeat;
+  }
+}
+@media (max-width: 500px) {
+  .awards {
+    padding: 40px 0;
   }
 }
 .awards__inner {
@@ -2023,6 +2119,11 @@ select {
 @media (max-width: 1200px) {
   .awards__img::before {
     display: none;
+  }
+}
+@media (max-width: 1380px) {
+  .awards__img img {
+    width: 400px;
   }
 }
 @media (max-width: 1200px) {
@@ -2327,7 +2428,7 @@ select {
   height: 447px;
   position: relative;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   .galery .swiper-slide {
     width: 250px;
     height: 300px;

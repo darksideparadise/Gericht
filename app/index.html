@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
   <title>Restaurant Home</title>
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;600;700&display=swap"
     rel="stylesheet">
@@ -313,25 +313,19 @@
   </div>
 </section>
 
-      <footer class="video">
+      <section class="video-section">
   <div class="container">
-    <div class="video-wrapper">
-      <div class="video-main">
-        <video preload="metadata" poster="img/preview2.jpg" loop height="763" width="100%" metadata>
-          <source class="video-video" src="resources/video.mp4" type="video/mp4">
-          <source class="video-video" src="resources/video.webm" type="video/webm">
-          Ваш браузер не поддерживает встроенные видео
-        </video>
-      </div>
-      <button type="button" class="play_button">
-        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="60" cy="60" r="59.5" stroke="#DCCA87" />
-          <path d="M76 61.5L52 76V47L76 61.5Z" fill="white" />
-        </svg>
-      </button>
+    <div id="video">
+      <div class="video-control" id="video-play"></div>
+      <div class="video-control" id="video-over"></div>
+      <video id="myVideo" preload="auto" poster="img/preview2.jpg">
+        <source src="resources/video.mp4" type="video/mp4">
+        <source src="resources/video.webm" type="video/webm">
+        Ваш браузер не поддерживает встроенные видео
+      </video>
     </div>
   </div>
-</footer>
+</section>
 
       <section class="awards">
   <div class="container">
