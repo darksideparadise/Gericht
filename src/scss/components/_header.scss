@@ -36,6 +36,9 @@
       visibility: hidden;
       transition: all 0.6s ease-in-out, visibility 0.6s ease-in-out;
     }
+    @include super-small-mobile {
+      width: 100%;
+    }
 
   }
 
@@ -81,6 +84,11 @@
       height: 100px;
       justify-content: center;
     }
+    @include rocks {
+      flex-direction: column;
+
+      justify-content: center;
+    }
   }
 
   .enter {
@@ -90,6 +98,10 @@
 
     @include hover {
       color: var(--title-color);
+    }
+    @include rocks {
+      margin-right: 0;
+      margin-bottom: 30px;
     }
   }
 
@@ -113,6 +125,10 @@
     top: 50%;
     left: -50%;
     transform: translateY(-50%);
+
+    @include rocks {
+      display: none;
+    }
   }
   .header-nav.menu--active {
     transform: none;
